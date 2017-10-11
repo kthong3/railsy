@@ -80,6 +80,7 @@ You can also render more than one collection!
 
 ---------------------------------------------------------
 Additional resources:
+
 http://guides.rubyonrails.org/v2.3/layouts_and_rendering.html
 
 http://api.rubyonrails.org/v5.1/classes/ActionView/PartialRenderer.html
