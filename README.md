@@ -24,7 +24,6 @@ _todo.html.erb
       <h2 class="title">Title: <%= link_to post.title, post %></h2>
       <p class="date">Body: <%= post.created_at.strftime("%B, %d, %Y") %>.</p>
   <% end %>
-  <br><br>
 </div>
 ```
 
@@ -34,8 +33,7 @@ _todo.html.erb
 
 ```
 <div class="post_wrapper">
-	<%= render partial: 'post', :collection => @posts %>
-	<br><br>
+ <%= render partial: 'post', :collection => @posts %>
 </div>
 ```
 
@@ -45,9 +43,8 @@ _todo.html.erb
 
 Under the hood Rails uses the convention that you will have a partial with the name of the models in the collection.
 ```
- <div class="post_wrapper">
-	<%= render @posts %>
-	<br><br>
+<div class="post_wrapper">
+ <%= render @posts %>
 </div>
 ```
 
@@ -61,7 +58,7 @@ A useful trick is to use the || operator to print something to the screen to ale
 
 ```
 <p>
-	<%= render(@posts) || "There are no blog posts!" %>
+ <%= render(@posts) || "There are no blog posts!" %>
 </p>
 ```
 
