@@ -2,6 +2,17 @@
 
 Use partials, they are key to reducing duplication (DRY).
 
+Using a collection partial will work as long as you are following Rails convention.
+
+app/controllers/todos_controller.rb
+```
+class TodosController < ApplicationController
+  def index
+    @todos = Todo.all
+  end
+ end
+```
+
 index.html.erb
 ```
 <%= render partial: 'todo', collection: @todos %>
@@ -9,9 +20,7 @@ index.html.erb
 
 _todo.html.erb
 ```
-<% cache todo do %>
-  <%= todo.name %>
-<% end %>
+<%= todo.name %>
 ```
 
 ---------------------------------------------------------
