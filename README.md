@@ -80,8 +80,8 @@ You can also render more than one collection!
 
 ---------------------------------------------------------
 Additional resources:
-http://guides.rubyonrails.org/v2.3/layouts_and_rendering.html
-http://api.rubyonrails.org/v5.1/classes/ActionView/PartialRenderer.html
-https://richonrails.com/articles/partials-in-ruby-on-rails
-https://learn.co/lessons/rendering-collections-reading
+http://guides.rubyonrails.org/v2.3/layouts_and_rendering.html \n
+http://api.rubyonrails.org/v5.1/classes/ActionView/PartialRenderer.html \n
+https://richonrails.com/articles/partials-in-ruby-on-rails \n
+https://learn.co/lessons/rendering-collections-reading \n
 https://robots.thoughtbot.com/rendering-collections-in-rails
