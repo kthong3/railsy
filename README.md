@@ -1,24 +1,47 @@
-# README
+# Collection Partials
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<div class="post_wrapper">
+  <% @posts.each do |post| %>
+      <h2 class="title">Title: <%= link_to post.title, post %></h2>
+      <p class="date">Body: <%= post.created_at.strftime("%B, %d, %Y") %>.</p>
+  <% end %>
+  <br><br>
+</div>
 
-Things you may want to cover:
 
-* Ruby version
+----------------------------------------
+<br>
+<p>Rails offers a great way to render a collection using a partial by passing the collection option to the render method.</p>
 
-* System dependencies
+<div class="post_wrapper">
+	<%= render partial: 'post', :collection => @posts %>
+	<br><br>
+</div>
 
-* Configuration
+----------------------------------------
+<br>
+<p>Another even more abstract method Rails gives us to do this is passing an array directly to the render method</p>
+<p>Under the hood Rails uses the convention that you will have a partial with the name of the models in the collection. </p>
 
-* Database creation
+ <div class="post_wrapper">
+	<%= render @posts %>
+	<br><br>
+</div>
 
-* Database initialization
 
-* How to run the test suite
+------------------------------------------
+<br>
+<p>What if the collection is empty?</p>
+<p>If you don't handle this exception the render method will return nil and nothing will appear on the screen. A useful trick is to use the || operator to print something to the screen to alert the user to this.</p>
 
-* Services (job queues, cache servers, search engines, etc.)
+<p>
+	<%= render(@posts) || "There are no blog posts!" %>
+</p>
 
-* Deployment instructions
 
-* ...
+------------------------------------------------------------
+
+<p>You can also render more than one collection!</p>
+<p>
+	<%= render [@posts, @comments] %>
+</p>
