@@ -55,7 +55,9 @@ Under the hood Rails uses the convention that you will have a partial with the n
 ## What if the collection is empty?
 
 If you don't handle this exception the render method will return nil and nothing will appear on the screen. 
+
 A useful trick is to use the || operator to print something to the screen to alert the user to this.
+
 
 ```
 <p>
