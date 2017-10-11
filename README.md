@@ -3,13 +3,16 @@
 Use partials, they are key to reducing duplication (DRY).
 
 index.html.erb
+```
 <%= render partial: 'todo', collection: @todos %>
+```
 
 _todo.html.erb
+```
 <% cache todo do %>
   <%= todo.name %>
 <% end %>
-
+```
 ---------------------------------------------------------
 
 ## How your code might look without using a partial
@@ -39,7 +42,7 @@ _todo.html.erb
 
 ## Another even more abstract method Rails gives us to do this is passing an array directly to the render method
 
-## Under the hood Rails uses the convention that you will have a partial with the name of the models in the collection.
+### Under the hood Rails uses the convention that you will have a partial with the name of the models in the collection.
 
 ```
  <div class="post_wrapper">
